@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.media.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.mediaplayer.HelloController">
+   <bottom>
+      <VBox alignment="CENTER" prefHeight="40.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#handleButtonAction" text="open">
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Calibri Bold" size="12.0" />
+                     </font></Button>
+                  <Button mnemonicParsing="false" onAction="#playMedia" prefWidth="100.0" text="play">
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Calibri Bold" size="12.0" />
+                     </font></Button>
+                  <Button mnemonicParsing="false" onAction="#stopMedia" text="stop">
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Calibri Bold" size="12.0" />
+                     </font></Button>
+                  <Button mnemonicParsing="false" onAction="#pauseMedia" text="pause">
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Calibri Bold" size="12.0" />
+                     </font></Button>
+                  <Button mnemonicParsing="false" onAction="#verySlowMedia" text="&lt;&lt;&lt;">
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Calibri Bold" size="12.0" />
+                     </font></Button>
+                  <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#slowMedia" text="&lt;&lt;">
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Calibri Bold" size="12.0" />
+                     </font></Button>
+                  <Button layoutX="183.0" layoutY="10.0" mnemonicParsing="false" onAction="#fastMedia" text="&gt;&gt;">
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Calibri Bold" size="12.0" />
+                     </font></Button>
+                  <Button layoutX="183.0" layoutY="10.0" mnemonicParsing="false" onAction="#veryFastMedia" text="&gt;&gt;&gt;">
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Calibri Bold" size="12.0" />
+                     </font></Button>
+                  <Button layoutX="183.0" layoutY="10.0" mnemonicParsing="false" onAction="#exitMedia" text="exit">
+                     <font>
+                        <Font name="Calibri Bold" size="12.0" />
+                     </font></Button>
+               </children></HBox>
+
+         </children>
+      </VBox>
+   </bottom>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+   <center>
+      <StackPane prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <MediaView fx:id="mediaView" fitHeight="200.0" fitWidth="200.0" />
+            <Slider fx:id="sceneSlider" StackPane.alignment="BOTTOM_CENTER" />
+            <Slider fx:id="volumeSlider" orientation="VERTICAL" prefHeight="280.0" prefWidth="14.0" StackPane.alignment="BOTTOM_RIGHT">
+               <StackPane.margin>
+                  <Insets bottom="20.0" top="20.0" />
+               </StackPane.margin>
+            </Slider>
+         </children>
+      </StackPane>
+   </center>
+</BorderPane>
